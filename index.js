@@ -35,6 +35,11 @@ app.get('/contact', (req,res) => {
 
 
 
+// route to team
+app.get('/team', (req,res) => {
+    res.render('team')
+})
+
 
 // setup server on port 3000
 app.listen(port, () => {
