@@ -28,6 +28,11 @@ app.get('/', (req,res) => {
     res.render('home')
 })
 
+// route to contact
+app.get('/contact', (req,res) => {
+    res.render('contact')
+})
+
 
 
 
