@@ -40,6 +40,34 @@ app.get('/team', (req,res) => {
     res.render('team')
 })
 
+// routes to services 
+
+app.get('/solution-it', (req,res) => {
+    res.render('services/solution_it')
+})
+
+
+app.get('/communication-marketing', (req,res) => {
+    res.render('services/communication_marketing')
+})
+
+app.get('/formation-et-elearning', (req,res) => {
+    res.render('services/formation_elearning')
+})
+
+app.get('/accompagnement-entreprises', (req,res) => {
+    res.render('services/accompagnement_des_entreprises')
+})
+app.get('/numeria', (req,res) => {
+    res.render('services/numeria')
+})
+
+
+// route to random link
+app.get('*', (req,res) => {
+    res.render('404')
+})
+
 
 // setup server on port 3000
 app.listen(port, () => {
