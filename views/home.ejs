@@ -14,7 +14,7 @@
 
         <!-- Full Width Slider -->
             <div class="section-block pt-0 pb-0">
-                <div class="tm-slider-container fullscreen full-width-slider" data-scale-under="1140" data-speed="1000">
+                <div class="tm-slider-container fullscreen full-width-slider" data-scale-under="1140" data-auto-advance data-auto-advance-interval="4000" data-progress-bar="false" data-pause-on-hover="false"  data-speed="1000">
                     <ul class="tms-slides">
                         <li class="tms-slide" data-image data-as-bkg-image data-force-fit data-animation="scaleIn" data-overlay-bkg-color="#000000" data-overlay-bkg-opacity="0.3">
                             <div class="tms-content">
@@ -140,7 +140,7 @@
 
             
             <!-- mission  Section 2 -->
-            <section class="section-block  feature-2 right ">
+            <section id="mission" class="section-block  feature-2 right ">
                 <div class="row flex">
                     <div class="column width-6">
                         <div class="feature-image">
@@ -187,7 +187,7 @@
 
             <!-- No valeurs start -->
             	<!-- Features -->
-				<section id="features" class="section-block bkg-grey-ultralight">
+				<section id="valeurs" class="section-block bkg-grey-ultralight">
 					<div class="row">
 						<div class="column width-12  center">
 							<h2 class="mb-50">Nos valeurs</h2>
@@ -311,7 +311,7 @@
     <!-- Boxed Feature Columns -->
         <div class="section-block pb-0 bkg-grey-ultralight">
             <div class="row flex boxes">
-                <div class="column width-4">
+                <div class="column width-4" onclick="location.href='/solution-it';" style="cursor: pointer;">
                     <div class="feature-column box rounded large bkg-white center horizon" data-animate-in="preset:flipInY;duration:1000ms;" data-threshold="1">
                         <span class="feature-icon icon-upload-to-cloud color-theme"></span>
                         <div class="feature-text">
@@ -320,7 +320,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column width-4">
+                <div class="column width-4" onclick="location.href='/communication-marketing';" style="cursor: pointer;">
                     <div class="feature-column box rounded large bkg-white center horizon" data-animate-in="preset:flipInY;duration:1000ms;delay:200ms;" data-threshold="1">
                         <span class="feature-icon icon-shop color-theme"></span>
                         <div class="feature-text">
@@ -329,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column width-4">
+                <div class="column width-4" onclick="location.href='/accompagnement-entreprises';" style="cursor: pointer;">
                     <div class="feature-column box rounded large bkg-white center horizon" data-animate-in="preset:flipInY;duration:1000ms;delay:400ms;" data-threshold="1">
                         <span class="feature-icon icon-users color-theme"></span>
                         <div class="feature-text">
@@ -338,7 +338,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column width-4 offset-2">
+                <div class="column width-4 offset-2" onclick="location.href='/formation-et-elearning';" style="cursor: pointer;">
                     <div class="feature-column box rounded large bkg-white center horizon" data-animate-in="preset:flipInY;duration:1000ms;delay:200ms;" data-threshold="1">
                         <span class="feature-icon icon-laptop color-theme"></span>
                         <div class="feature-text">
@@ -347,7 +347,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column width-4">
+                <div class="column width-4" onclick="location.href='/numeria';" style="cursor: pointer;">
                     <div class="feature-column box rounded large bkg-white center horizon" data-animate-in="preset:flipInY;duration:1000ms;delay:200ms;" data-threshold="1">
                         <span class="feature-icon icon-fingerprint color-theme"></span>
                         <div class="feature-text">
@@ -378,7 +378,7 @@
 									<h4>Do not hesitate to connect with us. your business's future is one click away.</h4>
 								</div>
 							</div>
-                        <form class="contact-form" action="php/send-email.php" method="post" novalidate>
+                        <form action="/send-email" method="POST" >
                             <div class="row">
                                 <div class="column width-6">
                                     <input type="text" name="fname" class="form-fname form-element large" placeholder="First Name*" tabindex="1" required>
@@ -393,44 +393,33 @@
                                     <input type="text" name="website" class="form-website form-element large" placeholder="Website" tabindex="4">
                                 </div>
                                 <div class="column width-6">
-                                    <div class="form-select form-element large">
-                                        <select name="options" class="form-aux" data-label="Options" tabindex="5">
-                                            <option selected="selected" value="">Project Budget</option>
-                                            <option value="">Less than $1000</option>
-                                            <option value="">$1000 - $2000</option>
-                                            <option value="">$2000 - $5000</option>
-                                            <option value="">$5000 - $7000</option>
-                                            <option value="">$10000 &amp; up</option>
-                                        </select>
-                                    </div>
+                                    <input type="text" name="subject" class="form-website form-element large" placeholder="Subject" tabindex="4">
                                 </div>
                                 <div class="column width-6">
                                     <div class="form-select form-element large">
                                         <select name="options" class="form-aux" data-label="Options" tabindex="5">
-                                            <option selected="selected" value="">How'd You Find Easyhome</option>
-                                            <option value="">From a friend</option>
-                                            <option value="">Found Sartre online</option>
-                                            <option value="">Previous client</option>
-                                            <option value="">Through advertising</option>
+                                            <option selected="selected" value="">How    did you find us?</option>
+                                            <option value="From a friend">From a friend</option>
+                                            <option value="from a previous client">From a previous client</option>
+                                            <option value="through advertising">Through advertising</option>
+                                            <option value="through LinkedIn">Through LinkedIn</option>
+                                            <option value="through Facebook">Through Facebook</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="column width-6">
-                                    <input type="text" name="honeypot" class="form-honeypot form-element large">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="column width-12">
                                     <div class="field-wrapper">
-                                        <textarea name="message" class="form-message form-element large" placeholder="Message*" tabindex="7" required></textarea>
+                                        <textarea name="body" class="form-message form-element large" placeholder="Message*" tabindex="7" required></textarea>
                                     </div>
                                 </div>
                                 <div class="column width-12">
-                                    <input type="submit" value="Send Email" class="form-submit button medium bkg-theme bkg-hover-theme color-white color-hover-white">
+                                    <button>submit</button>
+                                    <!-- <button type="submit" class="= button medium bkg-theme bkg-hover-theme color-white color-hover-white">submit</button> -->
                                 </div>
                             </div>
                         </form>
-                        <div class="form-response center"></div>
                     </div>
                 </div>
             </div>
