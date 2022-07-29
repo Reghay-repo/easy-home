@@ -47,9 +47,40 @@
 .box-card {
     transition: box-shadow .3s ease-in-out;
     border-radius:10px;
-    float: left;
-    
+    float: left; 
+    transition: transform .3s !important ;
+    position: relative;
+    z-index: 1;
   }
   .box-card:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    transform: scale(1.1) !important;
+  }
+
+/* ================= */
+
+.zoom-card {
+    border-radius:10px;
+    border: 1ox solid black;
+    float: left; 
+    transition: transform .3s !important ;
+    position: relative;
+    transition: box-shadow .3s ease-in-out;
+    z-index: 1;
+}
+.zoom-card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+
+
+
+
+  .bk-overlay {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.5);
+    background: url(data:;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuNUmK/OAAAAATSURBVBhXY2RgYNgHxGAAYuwDAA78AjwwRoQYAAAAAElFTkSuQmCC) repeat scroll transparent\9; /* ie fallback png background image */
+    color:white;
   }
