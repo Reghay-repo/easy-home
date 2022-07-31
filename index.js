@@ -6,18 +6,24 @@ const app           = express()
 const ejsMate = require('ejs-mate')
 const nodeMailer    = require('nodemailer');
 
-
+const data = require('./data')
 // set ejs as view engine
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views'))
-app.engine('ejs',ejsMate )
 app.use(express.static('public'));
+app.set('views', path.join(__dirname, '/views'))
+app.engine('ejs',ejsMate )
 app.use(express.urlencoded({extended:true}))
-
+const ExpressError =require('./utils/ExpressError')
 app.use(express.json())
 
-
-
+// app.use((err, req ,res, next) => {
+//     if(err) {
+//         console.log(err)
+//     }
+//     next()
+//     // const {status = 500} = err
+//     //  res.status(status).render('error', {err,status})
+// })
 
 
 // send email 
@@ -159,9 +165,36 @@ app.get('/numeria', (req,res) => {
 
 
 
-// route to random link
-app.get('*', (req,res) => {
-    res.render('404')
+
+// ============================================
+// formations
+
+
+
+
+
+app.get('/:link',  (req,res) => {
+    const {link} = req.params;
+   let obj =  data.filter(obj => {
+     return obj.link === link
+    })
+    if(obj) {
+        res.render('formations/page_formation', {obj: obj[0]})
+    }
+    
+})
+  
+    
+
+
+app.all('*', (req, res,next) => {
+    next(new ExpressError('Page not found', 404))
+})
+
+app.use((err, req ,res, next) => {
+    const {status = 500} = err
+    if(! err.message) err.message = 'something went wrong!'
+     res.status(status).render('404', {err,status})
 })
 
 

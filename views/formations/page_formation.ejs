@@ -1,0 +1,118 @@
+<% layout('layouts/second') -%>
+		<!-- Content -->
+        <div class="content clearfix">
+
+            	<!-- Full Width Slider Section -->
+				<section class="section-block featured-media page-intro tm-slider-parallax-container">
+					<div class="tm-slider-container full-width-slider" data-parallax data-parallax-fade-out data-animation="slide" data-scale-under="1140" data-scale-min-height="300">
+						<ul class="tms-slides">
+							<li class="tms-slide" data-image data-as-bkg-image data-force-fit>
+								<div class="tms-content">
+									<div class="tms-content-inner left bk-overlay" data-nav-dark>
+										<div class="row pt-40">
+											<div class="column width-12 center">
+												<h1 class="tms-caption color-white text-center text-uppercase inline"
+													data-animate-in="preset:slideInUpShort;duration:1000ms;delay:100ms;"
+													data-no-scale
+												>
+												<%= obj.title %> 
+												
+												</h1>
+										
+											</div>
+										</div>
+									</div>
+								</div>
+								<img data-src="images/slider/slider-elearning.jpg" data-retina src="images/blank.png" alt=""/>
+							</li>
+						</ul>
+					</div>
+				</section>
+                    
+                </div>
+            </div> 
+
+						<!-- About Section End -->
+						<!-- <div class="section-block pb-0 bkg-white">
+							<div class="row">
+								<div class="column width-10 offset-1 center">
+                                    <h2>  Compétences visées</h2>
+									<h3 class="mb-50">
+										Acquérir des méthodes pour établir un diagnostic et bâtir un plan de communication, concevoir et évaluer des actions de communication.  
+										</h3>
+								</div>
+							</div> -->
+
+
+								<!-- STUDIO AUDIOVISUEL PHOTO - SON -->
+								<div id="trips">
+
+
+									<!-- Hero Section 5 -->
+									<section class="section-block hero-5 hero-5-1 clear-height right show-media-column-on-mobile bkg-theme">
+										<div class="media-column width-6 window-height background-none">
+											<div class="tm-slider-container content-slider window-height" data-animation="slide" data-nav-arrows="false" data-nav-keyboard="false" data-auto-advance data-auto-advance-interval="4000" data-progress-bar="false" data-speed="1000" data-scale-under="0" data-width="722">
+												<ul class="tms-slides">
+													<li class="tms-slide" data-image data-as-bkg-image data-force-fit data-as-bkg-image data-animation="slideLeftRight">
+														<img data-src="images/goal.jpg" data-retina src="images/blank.png" alt=""/>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="column width-5">
+												<div class="hero-content split-hero-content">
+													<div class="hero-content-inner left center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
+														<div class="color-white">
+															<h2 class="mb-30">Objectifs</h2>
+															<% for(let item of obj.obj){ %>
+                                                                <li><%= item %> </li>
+                                                                <br>
+                                                              <% } %>  
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+								<!-- STUDIO AUDIOVISUEL PHOTO - SON End -->
+
+
+								<!-- EVÈNEMENTIEL & ESPACE STAND -->
+								<section class="section-block hero-5 hero-5-1 clear-height show-media-column-on-mobile bkg-grey-ultralight">
+									<div class="row">
+										<div class="column width-5 offset-7">
+											<div class="hero-content split-hero-content">
+												<div class="hero-content-inner left center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
+													<h2 class="mb-30">Programme :</h2>
+													<% for(let prog  of obj.programs) {%>
+                                                        <h4 class="mt-10 mb-10"><%= prog.title %>  </h4>
+														<ul style="list-style-type:none;">
+															<% prog.details.forEach(item => {%>
+                                                                <li>✓	<%= item  %>  </li>
+                                                            <% }) %>
+														</ul>
+                                                    <% } %>  
+												</div>  
+											</div>
+										</div> 
+										</div>
+										<div class="media-column width-6 window-height background-none">
+											<div class="tm-slider-container content-slider window-height" data-animation="slide" data-nav-arrows="false" data-nav-keyboard="false" data-auto-advance data-auto-advance-interval="4000" data-progress-bar="false" data-speed="1000" data-scale-under="0" data-width="722">
+												<ul class="tms-slides">
+													<li class="tms-slide" data-image data-as-bkg-image data-force-fit data-as-bkg-image data-animation="slideLeftRight">
+														<img data-src="images/portrait-margins-2.jpg" data-retina src="images/blank.png" alt=""/>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- EVÈNEMENTIEL & ESPACE STAND End -->
+								
+
+        </div>
+        <!-- Content End -->
+
+     
