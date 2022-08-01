@@ -65,10 +65,12 @@
 													<div class="hero-content-inner left center-on-mobile horizon" data-animate-in="preset:fadeIn;duration:1300ms;" data-threshold="0.5">
 														<div class="color-white">
 															<h2 class="mb-30">Objectifs</h2>
-															<% for(let item of obj.obj){ %>
-                                                                <li><%= item %> </li>
-                                                                <br>
-                                                              <% } %>  
+															<ul style="list-style: none;">
+																<% for(let item of obj.obj){ %>
+																	<li>✓ 	 <%= item %> </li>
+																	<br>
+																  <% } %>  
+															</ul>
 														</div>
 													</div>
 												</div>
