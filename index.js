@@ -166,12 +166,7 @@ app.get('/numeria', (req,res) => {
 
 
 
-// ============================================
 // formations
-
-
-
-
 
 app.get('/:link',  (req,res) => {
     const {link} = req.params;
